@@ -1,0 +1,8 @@
+# Besiege Mod .gitignore
+
+/src/.vs/
+/src/**/bin/
+/src/**/obj/
+**/*.dll
+*.files.json
+*.csproj.user
