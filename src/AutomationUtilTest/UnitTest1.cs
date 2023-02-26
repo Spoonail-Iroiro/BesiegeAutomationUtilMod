@@ -60,9 +60,21 @@ namespace AutomationUtilTest
             Assert.AreEqual(0L, Convert.ToInt32("-0"));
             Assert.AreEqual(0L, Convert.ToInt32("0"));
             Assert.AreEqual(0L, Convert.ToInt32("0000"));
-            Assert.AreEqual(18, Convert.ToInt32("0018"));
+            Assert.AreEqual(18L, Convert.ToInt32("0018"));
             assertFormatException(() => { Assert.AreEqual(0, Convert.ToInt64("")); });
         }
+
+        [TestMethod]
+        public void TestMod()
+        {
+            Assert.AreEqual(0, Util.MMod(0, 100));
+            Assert.AreEqual(99, Util.MMod(-1, 100));
+            Assert.AreEqual(1, Util.MMod(1, 100));
+            Assert.AreEqual(10, Util.MMod(-1290, 100));
+            Assert.AreEqual(0, Util.MMod(-3300, 11));
+        }
+
+
 
         public delegate void TestTargetFunc();
 
@@ -81,6 +93,8 @@ namespace AutomationUtilTest
 
             Assert.IsTrue(isExceptionThrownAsExpected);
         }
+
+        
 
         
     }
