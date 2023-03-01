@@ -12,12 +12,12 @@
 	<Version>0.1.0</Version>
 	
 	<Description>
-                Util mod for automation.
+                An util mod for automation (Increment/decrement integers in messages)
 	</Description>
 	
 	<!-- Square icon of the mod. Texture defined in the Resources section.
 		 This is displayed in the mod list and, if WorkshopThumbnail is not set, used as thumbnail when uploaded to the Steam workshop. -->
-	<!-- <Icon name="icon" /> -->
+	<Icon name="mod-icon" />
 	
 	<!-- Texture resource used as thumbnail when uploading the mod to the workshop.
 		 If this is not present, the Icon texture is used instead.
@@ -110,8 +110,10 @@
 	
 	<!-- Access these keys using the ModKeys class. -->
 	<Keys>
-                <Key name="message-increment" defaultModifier="LeftAlt" defaultTrigger="E"/>
-                <Key name="message-decrement" defaultModifier="LeftAlt" defaultTrigger="C"/>
+                <!--<Key name="message-increment" defaultModifier="LeftAlt" defaultTrigger="E"/>-->
+                <!--<Key name="message-decrement" defaultModifier="LeftAlt" defaultTrigger="C"/>-->
+                <Key name="message-increment" defaultModifier="LeftAlt" defaultTrigger="Q"/>
+                <Key name="message-decrement" defaultModifier="LeftAlt" defaultTrigger="Z"/>
 		
 	</Keys>
 	
@@ -121,7 +123,7 @@
 		 You also need to list resources used in your Blocks and Entities.
 		 Available resource types are Mesh, Texture, AudioClip, and AssetBundle. -->
 	<Resources>
-		<!-- <Mesh name="some-mesh-name" path="some_mesh_file.obj" /> -->
+		<Texture name="mod-icon" path="automationutil_sumbnail.png" />
 		<!-- <Texture name="some-texture-name" path="some_texture_file.png" /> -->
 		<AudioClip name="incr" path="incr.wav" />
 	</Resources>

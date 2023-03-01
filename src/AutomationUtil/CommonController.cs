@@ -98,7 +98,14 @@ namespace AutomationUtil
             }
             if (isApplied)
             {
-                incrSound.Play();
+                if (delta >= 0)
+                {
+                    incrSound.Play();
+                }
+                else
+                {
+                    decrSound.Play();
+                }
             }
 
         }

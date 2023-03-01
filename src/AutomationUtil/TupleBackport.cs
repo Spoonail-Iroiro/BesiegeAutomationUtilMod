@@ -21,6 +21,7 @@ using System.Diagnostics;
 using System.Globalization;
 using System.Numerics;
 using System.Runtime.InteropServices;
+using AutomationUtil;
 
 namespace System
 {
@@ -3160,7 +3161,7 @@ namespace System
 				);
 
 			default:
-				Debug.Fail("Missed all cases for computing ValueTuple hash code");
+				Mod.Log("Missed all cases for computing ValueTuple hash code");
 				return -1;
 			}
 		}
@@ -3343,7 +3344,7 @@ namespace System
 				);
 
 			default:
-				Debug.Fail("Missed all cases for computing ValueTuple hash code");
+				Mod.Log("Missed all cases for computing ValueTuple hash code");
 				return -1;
 			}
 		}
